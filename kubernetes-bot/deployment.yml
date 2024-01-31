@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegram-bot-deployment
+  namespace: monitoring
+  labels:
+    app: telegram-bot-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telegram-bot-server
+  template:
+    metadata:
+      labels:
+        app: telegram-bot-server
+    spec:
+      containers:
+        - name: telegram-bot-server
+          image: nguyenngochuy/prometheus_bot
+          ports:
+            - containerPort: 9999
