@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: telegram-bot-server
-          image: nguyenngochuy/prometheus_bot
+          image: nguyenngochuy/prometheus_bot:latest
           ports:
             - containerPort: 9999
           volumeMounts:
