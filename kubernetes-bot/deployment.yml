@@ -23,11 +23,8 @@ spec:
           volumeMounts:
               - name: bot-config-volume
                 mountPath: /etc/prometheus/
-              - name: bot-template-volume
-                mountPath: /etc/prometheus/
       volumes:
         - name: bot-config-volume
           configMap:
             defaultMode: 420
             name: bot-server-conf
-        - name: bot-template-volume
