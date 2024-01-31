@@ -36,4 +36,4 @@ spec:
   
         - name: prometheus-storage-volume
           persistentVolumeClaim:
-            claimName: prometheus-grafana-pvc
+            claimName: prometheus-pvc
