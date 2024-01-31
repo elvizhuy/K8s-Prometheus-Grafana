@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bot-server-conf
+  labels:
+    name: bot-server-conf
+  namespace: monitoring
+data:
+  telegram_token: "6389783318:AAEALw6f3fEsf6mOf3cAP6KQ2t2BcWG1QPw"
+  template_path: "/etc/telegrambot/template.tmpl"
+  time_zone: "Asia/Ho_Chi_Minh" 
+  split_token: "|" 
+  disable_notification: true
+  time_outdata: "02/01/2006 15:04:05"
+  split_msg_byte: 10000
