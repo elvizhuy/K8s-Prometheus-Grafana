@@ -5,10 +5,10 @@ metadata:
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
 provisioner: csi-driver.example-vendor.example
-reclaimPolicy: Retain # default value is Delete
+reclaimPolicy: Retain 
 allowVolumeExpansion: true
 mountOptions:
-  - discard # this might enable UNMAP / TRIM at the block storage layer
+  - discard 
 volumeBindingMode: WaitForFirstConsumer
 parameters:
-  guaranteedReadWriteLatency: "true" # provider-specific
+  guaranteedReadWriteLatency: "true" 
