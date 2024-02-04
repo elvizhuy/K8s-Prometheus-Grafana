@@ -15,6 +15,29 @@ spec:
       labels:
         app: prometheus-server
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: zone
+                operator: In
+                values:
+                - prometheus
+                - grafana
+                - alertmanager
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            preference:
+              matchExpressions:
+              - key: cpu
+                operator: In
+                values:
+                - "4"
+              - key: memory
+                operator: In
+                values:
+                - "4"
       containers:
         - name: prometheus
           image: nguyenngochuy/prometheus-vip:latest
