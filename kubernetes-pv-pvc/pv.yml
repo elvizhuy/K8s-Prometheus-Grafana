@@ -18,9 +18,9 @@ spec:
     path: /var/nfs/home/persistent-volume
     server: 192.168.1.61
   nodeAffinity:
-  required:
-    nodeSelectorTerms:
-      - matchExpressions:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
           - key: zone1
             operator: In
             values:
