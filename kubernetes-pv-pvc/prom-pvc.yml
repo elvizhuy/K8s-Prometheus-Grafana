@@ -13,7 +13,8 @@ spec:
       storage: 10Gi
   storageClassName: prometheus-grafana-class
   selector:
+    selector:
     matchLabels:
-      release: "stable"
-    matchExpressions:
-      - {key: environment, operator: In, values: [dev]}
+      zone1: prometheus
+      zone2: grafana
+      zone3: alertmanager
