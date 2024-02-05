@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
