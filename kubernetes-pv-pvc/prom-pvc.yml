@@ -13,7 +13,6 @@ spec:
       storage: 10Gi
   storageClassName: prometheus-grafana-class
   selector:
-    selector:
     matchLabels:
       zone1: prometheus
       zone2: grafana
