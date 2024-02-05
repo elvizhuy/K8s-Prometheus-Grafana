@@ -14,6 +14,7 @@ spec:
   storageClassName: prometheus-grafana-class
   selector:
     matchLabels:
+      name: prometheus-grafana-pv
       zone1: prometheus
       zone2: grafana
       zone3: alertmanager
