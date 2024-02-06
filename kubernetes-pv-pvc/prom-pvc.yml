@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   volumeMode: Filesystem
   volumeName: nfs
   resources:
