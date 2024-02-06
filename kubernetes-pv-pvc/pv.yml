@@ -4,6 +4,8 @@ metadata:
   name: nfs-pv
   namespace: monitoring
 spec:
+  claimRef:
+    name: nfs-pvc
   capacity:
     storage: 20Gi
   volumeMode: Filesystem
