@@ -1,14 +1,14 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: prometheus-grafana
+  name: nfs
   annotations:
     storageclass.kubernetes.io/is-default-class: "false"
-provisioner: kubernetes.io/no-provisioner
+provisioner: nfs.csi.k8s.io
 reclaimPolicy: Retain 
 allowVolumeExpansion: true
 mountOptions:
   - discard 
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
 parameters:
   guaranteedReadWriteLatency: "true" 
