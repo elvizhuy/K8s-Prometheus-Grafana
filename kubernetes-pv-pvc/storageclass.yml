@@ -2,8 +2,8 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: nfs
-  annotations:
-    storageclass.kubernetes.io/is-default-class: "false"
+annotations:
+  storageclass.kubernetes.io/is-default-class: "false"
 provisioner: kubernetes.io/no-provisioner
 reclaimPolicy: Retain 
 allowVolumeExpansion: true
@@ -11,4 +11,5 @@ mountOptions:
   - discard 
 volumeBindingMode: Immediate
 parameters:
-  guaranteedReadWriteLatency: "true" 
+  guaranteedReadWriteLatency: "true"
+
