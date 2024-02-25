@@ -17,5 +17,6 @@ spec:
     - hard
     - nfsvers=4.1
   nfs:
-    path: /var/nfs/home/persistent-volume
+    # path: /var/nfs/home/persistent-volume
+    path: /nfs/home/huynn/persistent-volume-01
     server: 192.168.1.61
