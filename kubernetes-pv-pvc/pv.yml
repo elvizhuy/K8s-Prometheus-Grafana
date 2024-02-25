@@ -7,7 +7,7 @@ spec:
     name: nfs-pvc
     namespace: monitoring
   capacity:
-    storage: 10Gi
+    storage: 15Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
