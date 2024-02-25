@@ -7,16 +7,18 @@ spec:
     name: nfs-pvc
     namespace: monitoring
   capacity:
-    storage: 20Gi
+    storage: 10Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   storageClassName: nfs
-  mountOptions:
-    - hard
-    - nfsvers=4.1
-  nfs:
-    path: /var/nfs/home/persistent-volume
-    # path: /nfs/home/huynn/persistent-volume-01
-    server: 192.168.1.61
+  # mountOptions:
+  #   - hard
+  #   - nfsvers=4.1
+  # nfs:
+  #   path: /var/nfs/home/persistent-volume
+  #   path: /nfs/home/huynn/persistent-volume-01
+  #   server: 192.168.1.61
+  hostPath:
+    path: "/Prometheus/Data"
